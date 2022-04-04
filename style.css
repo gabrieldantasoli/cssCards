@@ -586,4 +586,229 @@ section{
     border-radius: 50px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+i{
+    color: #000;
+}
 /*card7 style ends*/
+
+/*card8 style starts*/
+#card8 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+}
+#card8{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card8 .container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(72, 72, 72);
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#card8 .container .card{
+    position: relative;
+    width: 90vw;
+    height: 60vw;
+    max-width: 300px;
+    max-height: 200px;
+    max-width: 300px;
+    margin: 1rem 2rem;
+}
+#card8 .container .card .imgbox{
+    transition: 0.5s;
+    position: absolute;
+    top: 0;left: 0;
+    background-color: rgb(38, 38, 38);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    z-index: 1;
+    transition: 0.5s;
+}
+#card8 .container .card .imgbox::after{
+    content: attr(data-text);
+    position: absolute;
+    font-weight: 800;
+    font-size: 150%;
+    font-family: lemon;
+    top: 75%;
+    color: rgba(255,255,255,0.4);
+}    
+#card8 .container .card:hover .imgbox::after{
+    visibility: hidden;
+}
+#card8 .container .card:hover .imgbox{
+    position: absolute;
+    left: -50px;
+    top: calc((50% - 50px));
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+    background: linear-gradient(135deg,rgb(255, 43, 223),rgb(228, 228, 14));
+}
+#card8 .container .card .content{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 10px 10px 10px 60px;
+}
+#card8 .container .card .content h2{
+    color: rgb(255,43,233);
+    font-size: 1.5em;
+}
+#card8 .container .card .content p{
+    font-weight: 400;
+    font-size: 0.85em;
+    margin-bottom: 0.5rem;
+}
+#card8 .container .card .content a{
+    text-decoration: none;
+    color: rgb(255,43,233);
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid rgb(255,43,233);
+}
+#card8 .container .card .content a:hover{
+    background-color: rgb(255,43,233);
+    color: #fff;
+}
+
+section{
+    overflow-x: hidden;
+}
+
+
+#card8 .container .card .imgbox img{
+    filter: invert(1);
+    max-width: 80px;
+    width: 70%;
+}
+
+@media (max-width:430px) {
+    #card8 .container .card:hover .imgbox{
+        width: 100%;
+        height: 50%;
+        left: 0;
+        top: 0;
+        transition: 1s;
+        border-radius: 1rem 1rem 0 0;
+    }
+    #card8 .container .card:hover{
+        top: 0;left: 0;
+        height: 120vw;
+        max-height: 400px;
+    }
+    #card8 .container .card:hover .content{
+        top: 50%;
+        height: 50%;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+}
+/*card8 style ends*/
+
+/*card9 style starts*/
+#card9 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+}
+#card9{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card9 .container{
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+#card9 .container .card{
+    overflow: hidden;
+    position: relative;
+    width: 95%;
+    max-width: 400px;
+    background: linear-gradient(135deg,rgb(52, 52, 52),rgb(99, 99, 99),rgb(52, 52, 52));
+    border-radius: 1rem;
+}
+#card9 .container .card img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+#card9 .container .card:hover img{
+    opacity: 0.3;
+}
+#card9 .container .card .content{
+    padding: 1rem;
+}
+#card9 .container .card .content h2{
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+#card9 .container .card .content p{
+    color: rgba(0,0,0);
+    font-weight: 500;
+}
+#card9 .container .card .content a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+}
+#card9 .container .card .content{
+    transition: 1s;
+    position: absolute;
+    top: 100%;
+}
+#card9 .container .card:hover .content{
+    top: 0;
+}
+#card9 .container .card .imgbox::after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: attr(data-city);
+    position: absolute;
+    bottom: 0;left: calc(50% - 75px);
+    width: 150px;
+    height: 50px;
+    background-color: rgb(99,99,99);
+    z-index: 2;
+    font-size: 1.5em;
+    color: rgb(30,30,30);
+    text-align: center;
+    font-weight: 600;
+    border-radius: 1rem 1rem 0 0;
+}
+#card9 .container .card:hover .imgbox::after{
+    opacity: 0;
+}
+
+/*card9 styles ends*/
