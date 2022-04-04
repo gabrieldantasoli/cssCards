@@ -4,6 +4,7 @@ var colors = document.querySelectorAll('.colors div')
 colors.forEach(item => item.addEventListener('click',function (e){
     colors.forEach(item => item.classList.remove('active')) ;
     document.querySelector('#card1img').src = `images/card1/${e.target.id}.png` ;
+    document.querySelector(`#${e.target.id}`).classList.add('active') ;
 })) ;
 
 var numbers = document.querySelectorAll('.numbers div')
