@@ -14,3 +14,15 @@ numbers.forEach(item => item.addEventListener('click',function (e){
 })) ;
 
 //card1 interations ends
+
+
+//card11 interations starts
+var lis = document.querySelectorAll('.sizes li') ;
+
+lis.forEach(item => item.addEventListener('click',change)) ;
+
+function change(e){
+    lis.forEach(item => item.classList.remove('active'))
+    document.querySelector(`#${e.target.id}`).classList.add('active')
+}
+//card11 interations ends

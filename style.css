@@ -751,7 +751,7 @@ section{
 #card9 .container .card{
     overflow: hidden;
     position: relative;
-    width: 95%;
+    width: 100%;
     max-width: 400px;
     background: linear-gradient(135deg,rgb(52, 52, 52),rgb(99, 99, 99),rgb(52, 52, 52));
     border-radius: 1rem;
@@ -764,6 +764,11 @@ section{
     opacity: 0.3;
 }
 #card9 .container .card .content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
     padding: 1rem;
 }
 #card9 .container .card .content h2{
@@ -783,12 +788,14 @@ section{
     padding: 0.4rem 1rem;
 }
 #card9 .container .card .content{
+    opacity: 0;
     transition: 1s;
     position: absolute;
     top: 100%;
 }
 #card9 .container .card:hover .content{
     top: 0;
+    opacity: 1;
 }
 #card9 .container .card .imgbox::after{
     display: flex;
@@ -810,5 +817,276 @@ section{
 #card9 .container .card:hover .imgbox::after{
     opacity: 0;
 }
-
+@media (max-width:400px) {
+    #card9 .container .card .content h2{
+        font-size: 1.3em;
+    }
+    #card9 .container .card .content p{
+        font-size: 0.8em;
+    }
+    #card9 .container .card .content a{
+        font-size: 1em;
+    }
+}
 /*card9 styles ends*/
+
+/*card10 style starts*/
+#card10 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+#card10{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(85, 85, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card10 .container{
+    width: 100vw;
+    max-width: 1200px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#card10 .container .card{
+    position: relative;
+    width: 90%;
+    max-width: 300px;
+    background-color: #000;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    overflow: hidden;
+}
+#card10 .container .card::before{
+    content: '';
+    transition: 0.5s;
+    position: absolute;
+    bottom: 0;left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(45deg,rgb(255, 195, 30),rgb(185, 0, 132),rgb(96, 14, 237));
+    z-index: 0;
+}
+#card10 .container .card:hover::before{
+    height: 100%;
+}
+#card10 .container .card *{
+    z-index: 2;
+}
+#card10 .container .card h2{
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+#card10 .container .card h3{
+    color: rgb(239, 239, 239);
+    font-size: 1.3em;
+}
+#card10 .container .card p{
+    text-align: center;
+    color: rgb(227, 227, 227);
+    font-weight: 500;
+    line-height: 1.2em;
+}
+#card10 .imgbox{
+    margin: 1rem 0;
+    position: relative;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: linear-gradient(45deg,rgb(255, 195, 30),rgb(185, 0, 132),rgb(96, 14, 237));
+}
+#card10 .card:hover .imgbox{
+    background: #000;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+#card10 .imgbox img{
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80px;
+    border-radius: 50%;
+}
+#card10 .social{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#card10 .social img{
+    margin-top: 1rem;
+    filter: invert(1);
+    width: 30px;
+}
+#card10 .social img:hover{
+    transform: scale(1.1);
+}
+/*card10 style ends*/
+
+/*card11 style starts*/
+#card11 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+#card11{
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(rgb(74, 140, 239),rgb(74, 118, 239) 50%,#fff 50% ,#fff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#card11 .card{
+    position: relative;
+    display: flex;
+    height: auto;
+    width: 90vw;
+    height: 60vw;
+    max-width: 250px;
+    max-height: 350px;
+    background-color: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    overflow: hidden;
+}
+#card11 .card .imgbox{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(74, 118, 239);
+    z-index: 2;
+    overflow: hidden;
+}
+#card11 .card:hover{
+    max-width: 500px;
+}
+#card11 .card:hover .imgbox{
+    width: 50%;
+}
+#card11 .card .imgbox img{
+    width: 90%;
+    transition: 0.5s;
+}
+#card11 .card:hover .imgbox img{
+    transform: rotateZ(-35deg) scale(1.1);
+}
+#card11 .card .content{
+    position: absolute;
+    top: 0;left: 50%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+} 
+#card11 .card .content h2{
+    font-size: 1.5em;
+}
+#card11 .card .content > h3{
+    font-size: 1.1em;
+    text-align: center;
+}
+#card11 .card .content h3 span{
+    color: #03a9f4;
+}
+#card11 .card .content p{
+    text-align: center;
+}
+#card11 .size{
+    width: 90%;
+    text-align: left;
+    margin: 0.5rem 0;
+}
+#card11 .sizes{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+#card11 .sizes li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: rgb(66, 66, 66);
+    font-weight: 600;
+    border: 2px solid #0075ab;
+    opacity: 0.6;
+}
+#card11 .sizes li.active{
+    background-color: #0075ab;
+    color: #fff;
+    opacity: 1;
+}
+#card11 .card .group{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#card11 .card .group .price{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+#card11 .card .group a{
+    padding: 0.5rem 1rem;
+    background-color: rgb(74, 118, 239);
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width:610px) {
+    #card11 .card{
+        width: 90vw;
+        height: 60vw;
+        max-width: 350px;
+        max-height: 250px;
+    }
+    #card11 .card:hover{
+        height: 200vw;
+        max-height: 500px;
+    }
+    #card11 .card:hover .imgbox{
+        top: 0;left: 0;
+        width: 100%;
+        height: 50%;
+    }
+    #card11 .card:hover .content{
+        overflow: hidden;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 50%;
+    }
+    #card11 .card:hover .imgbox img{
+        width: 60%;
+        max-width: 275px;
+    }
+}
+/*card11 style ends*/
